@@ -8,32 +8,32 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1a202c; /* Fundo escuro de fallback */
-            color: #e2e8f0; /* Cor do texto padrão mais clara */
-            /* Estilos para a imagem de fundo */
-            background-image: url('/src/imagens/capa.png'); /* Sua imagem de capa como fundo */
-            background-size: cover; /* Faz a imagem cobrir toda a área */
-            background-position: center; /* Centraliza a imagem */
-            background-repeat: no-repeat; /* Evita que a imagem se repita */
-            background-attachment: fixed; /* Fixa a imagem de fundo ao viewport */
-            min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
-            display: flex; /* Para flexbox no body */
-            flex-direction: column; /* Organiza os elementos em coluna */
+            background-color: #1a202c; 
+            color: #e2e8f0; 
+            /
+            background-image: url('/src/imagens/capa.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
         }
-        /* Estilos adicionais para o carrossel */
+        
         .carousel-wrapper {
-            display: flex; /* Permite que os itens do carrossel fiquem lado a lado */
-            transition: transform 0.5s ease-in-out; /* Transição suave para o movimento do carrossel */
-            width: 100%; /* Garante que o wrapper ocupe toda a largura */
+            display: flex; 
+            transition: transform 0.5s ease-in-out; 
+            width: 100%; 
         }
         .carousel-item {
-            min-width: 100%; /* Cada item ocupa 100% da largura do contêiner visível */
-            box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
-            flex-shrink: 0; /* Impede que os itens encolham */
+            min-width: 100%; 
+            box-sizing: border-box;
+            flex-shrink: 0;
         }
         .carousel-container {
-            overflow: hidden; /* Esconde o conteúdo que transborda, criando o efeito de carrossel */
-            position: relative; /* Necessário para posicionar os botões de navegação */
+            overflow: hidden; 
+            position: relative; 
         }
         .carousel-button {
             position: absolute;
@@ -45,7 +45,7 @@
             padding: 1rem;
             cursor: pointer;
             z-index: 10;
-            border-radius: 9999px; /* Tailwind's full rounded */
+            border-radius: 9999px; 
             transition: background-color 0.3s ease;
         }
         .carousel-button:hover {
@@ -57,18 +57,18 @@
         .carousel-button.next {
             right: 1rem;
         }
-        /* Estilos para links de jogo */
+       
         .jogo-link {
-            text-decoration: none; /* Remove sublinhado padrão dos links */
-            color: inherit; /* Herda a cor do texto do pai */
-            display: block; /* Faz o link ocupar todo o espaço do card */
+            text-decoration: none; 
+            color: inherit; 
+            display: block; 
         }
-        /* Ajuste para o conteúdo principal ficar acima da imagem de fundo */
+       /
         main {
-            flex-grow: 1; /* Permite que o main ocupe o espaço restante */
-            background-color: rgba(26, 32, 44, 0.8); /* Fundo semi-transparente para o conteúdo */
-            padding-top: 2rem; /* Espaçamento superior */
-            padding-bottom: 2rem; /* Espaçamento inferior */
+            flex-grow: 1; /
+            background-color: rgba(26, 32, 44, 0.8); /
+            padding-top: 2rem; 
+            padding-bottom: 2rem; 
         }
     </style>
     <link rel="stylesheet" href="style.css">
