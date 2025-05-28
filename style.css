@@ -1,0 +1,65 @@
+body {
+    background-color: #1a202c; /* Fundo escuro para o tema nostálgico */
+    color: #e2e8f0; /* Cor do texto padrão mais clara */
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0; /* Remove preenchimento padrão do navegador */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+}
+
+/* Estilo para o contêiner principal da página */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin-left: auto; /* Centraliza o contêiner */
+    margin-right: auto; /* Centraliza o contêiner */
+    padding: 1rem; /* Preenchimento interno */
+}
+
+/* Estilos para a seção de capa */
+#capa img {
+    border: 4px solid #4a5568; /* Borda para a imagem de capa */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+}
+
+/* Estilos para a galeria de jogos */
+.grid {
+    display: grid; /* Usa CSS Grid para o layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas */
+    gap: 2rem; /* Espaçamento entre os itens do grid */
+}
+
+/* Estilos para cada bloco de jogo */
+.jogo {
+    border: 2px solid #2d3748; /* Borda para cada card de jogo */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Sombra para os cards */
+    transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+}
+
+.jogo:hover {
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+}
+
+.jogo img {
+    border-bottom: 2px solid #2d3748; /* Borda inferior para a imagem do jogo */
+}
+
+.jogo h3 {
+    color: #90cdf4; /* Cor do título do jogo */
+}
+
+.jogo p {
+    color: #cbd5e0; /* Cor da descrição do jogo */
+}
+
+/* Estilos para o rodapé */
+footer {
+    border-top: 2px solid #2d3748; /* Borda superior para o rodapé */
+}
+
+/* Estilos para cabeçalhos e parágrafos */
+h1, h2, h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra no texto dos títulos */
+}
+
+p {
+    text-align: justify; /* Justifica o texto para melhor leitura */
+}

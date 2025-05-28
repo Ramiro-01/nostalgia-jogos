@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostalgia Gamer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Fundo escuro de fallback */
+            color: #e2e8f0; /* Cor do texto padrão mais clara */
+            /* Estilos para a imagem de fundo */
+            background-image: url('/src/imagens/capa.png'); /* Sua imagem de capa como fundo */
+            background-size: cover; /* Faz a imagem cobrir toda a área */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            background-attachment: fixed; /* Fixa a imagem de fundo ao viewport */
+            min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
+            display: flex; /* Para flexbox no body */
+            flex-direction: column; /* Organiza os elementos em coluna */
+        }
+        /* Estilos adicionais para o carrossel */
+        .carousel-wrapper {
+            display: flex; /* Permite que os itens do carrossel fiquem lado a lado */
+            transition: transform 0.5s ease-in-out; /* Transição suave para o movimento do carrossel */
+            width: 100%; /* Garante que o wrapper ocupe toda a largura */
+        }
+        .carousel-item {
+            min-width: 100%; /* Cada item ocupa 100% da largura do contêiner visível */
+            box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+            flex-shrink: 0; /* Impede que os itens encolham */
+        }
+        .carousel-container {
+            overflow: hidden; /* Esconde o conteúdo que transborda, criando o efeito de carrossel */
+            position: relative; /* Necessário para posicionar os botões de navegação */
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 9999px; /* Tailwind's full rounded */
+            transition: background-color 0.3s ease;
+        }
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .carousel-button.prev {
+            left: 1rem;
+        }
+        .carousel-button.next {
+            right: 1rem;
+        }
+        /* Estilos para links de jogo */
+        .jogo-link {
+            text-decoration: none; /* Remove sublinhado padrão dos links */
+            color: inherit; /* Herda a cor do texto do pai */
+            display: block; /* Faz o link ocupar todo o espaço do card */
+        }
+        /* Ajuste para o conteúdo principal ficar acima da imagem de fundo */
+        main {
+            flex-grow: 1; /* Permite que o main ocupe o espaço restante */
+            background-color: rgba(26, 32, 44, 0.8); /* Fundo semi-transparente para o conteúdo */
+            padding-top: 2rem; /* Espaçamento superior */
+            padding-bottom: 2rem; /* Espaçamento inferior */
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-200">
+    <header class="bg-gray-800 text-white p-6 text-center rounded-b-lg shadow-lg">
+        <h1 class="text-5xl font-bold mb-2">Bem-vindo à Nostalgia Gamer!</h1>
+        <p class="text-xl">Reviva os clássicos que marcaram gerações.</p>
+    </header>
+
+    <main class="container mx-auto p-4">
+        <section id="jogos" class="bg-gray-900 p-8 rounded-lg shadow-2xl relative">
+            <h2 class="text-4xl font-bold text-center text-white mb-8">Nossos Clássicos</h2>
+
+           
+            <div class="carousel-container relative">
+                <div class="carousel-wrapper" id="carouselWrapper">
+                    <div class="carousel-item p-4">
+                        <a href="historia-jogo1.html" class="jogo-link">
+                            <div class="jogo bg-gray-800 p-6 rounded-lg shadow-xl transform transition duration-300 hover:scale-105 hover:bg-gray-700">
+                                <img src="/src/imagens/crash.npg.jpg" alt="Nome do Jogo 1" class="w-full h-48 object-cover mb-4 rounded-md">
+                                <h3 class="text-2xl font-semibold text-white mb-2">Crash</h3>
+                                <p class="text-gray-300 text-sm">Crash Bandicoot: A Volta Turbo da Nostalgia dos Anos 90.</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="carousel-item p-4">
+                        <a href="historia-jogo2.html" class="jogo-link">
+                            <div class="jogo bg-gray-800 p-6 rounded-lg shadow-xl transform transition duration-300 hover:scale-105 hover:bg-gray-700">
+                                <img src="/src/imagens/H2x1_SNES_SuperMarioWorld_image1600w.jpg" alt="Nome do Jogo 2" class="w-full h-48 object-cover mb-4 rounded-md">
+                                <h3 class="text-2xl font-semibold text-white mb-2">Mario World</h3>
+                                <p class="text-gray-300 text-sm">Outro jogo clássico que marcou época. Prepare-se para uma viagem no tempo com este ícone dos games.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item p-4">
+                        <a href="historia-jogo3.html" class="jogo-link">
+                            <div class="jogo bg-gray-800 p-6 rounded-lg shadow-xl transform transition duration-300 hover:scale-105 hover:bg-gray-700">
+                                <img src="/src/imagens/black.jpg" alt="Nome do Jogo 3" class="w-full h-48 object-cover mb-4 rounded-md">
+                                <h3 class="text-2xl font-semibold text-white mb-2">black</h3>
+                                <p class="text-gray-300 text-sm">Um título inesquecível que trouxe inovações e horas de diversão para milhões de jogadores.</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="carousel-item p-4">
+                        <a href="historia-jogo4.html" class="jogo-link">
+                            <div class="jogo bg-gray-800 p-6 rounded-lg shadow-xl transform transition duration-300 hover:scale-105 hover:bg-gray-700">
+                                <img src="/src/imagens/God_of_war.png" alt="God Of War" class="w-full h-48 object-cover mb-4 rounded-md">
+                                <h3 class="text-2xl font-semibold text-white mb-2">God Of War</h3>
+                                <p class="text-gray-300 text-sm">Mais um clássico para a sua coleção! Descubra ou redescubra a magia dos jogos antigos.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="carousel-button prev" id="prevBtn">&#10094;</button>
+                <button class="carousel-button next" id="nextBtn">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 text-center mt-12 rounded-t-lg shadow-lg">
+        <p class="text-gray-400">&copy; 2025 Nostalgia Gamer. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
